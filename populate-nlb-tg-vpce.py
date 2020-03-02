@@ -207,8 +207,7 @@ def dns_lookup(domainname, record_type, *dnsserver):
     return lookup_result_list
 
 
-# def lambda_handler(event, context):
-def main():
+def lambda_handler(event, context):
     """
         Main Lambda handler
         This is invoked when Lambda is called
@@ -337,7 +336,3 @@ def main():
                 deregister_target(NLB_TG_ARN, deregisterTarget_list)
     else:
         print "INFO: No old target deregistered"
-
-
-if __name__ == '__main__':
-    main()
